@@ -1,0 +1,265 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+  background-color: #ddd;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+h1{
+  font-size: 50px;
+  line-height: 1;
+  padding: 50px 0;
+  text-align: center;
+}
+
+h2{
+  font-size: 32px;
+  line-height: 1.5;
+}
+
+nav ul{
+  list-style-type: none;
+}
+
+nav li{
+  /*Your code here */
+  padding-right: 20px;
+  display: inline-block;
+}
+
+nav a{
+  color: black;
+  font-weight: bold;
+  text-decoration: none; 
+}
+
+nav a:hover{
+  text-decoration: underline; /*Your code here - add the underline*/;
+}
+
+.skip a{
+  background: white;
+  left: 0;
+  padding: 6px;
+  position: absolute; /*Your code here - position relative to the parent */
+  top: -40px;     /*Your code here - place 40px higher */
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 1;
+}
+
+/*Your code here*/{
+/*Add the selector and rule to move the skip link to the exact top.*/
+}
+
+/*Your code here*/{
+/*Add the selector and code to put a 2px black border around all elements in focus.*/
+}
+
+
+footer{
+  background-color: black;
+  color: white;
+  grid-column: 1 / -1;  /*Can you explain what this does?*/
+  grid-row: 7 / auto;   /*Can you rewrite it?*/
+  padding-top: 30px;
+  text-align: center;
+}
+
+
+.container{
+
+  /*Your code here  */
+  justify-self: center;
+  align-self: center;
+  display: grid;
+  grid-row-gap: 15px;
+  grid-template-columns: 100px 500px 100px;
+  /*Provided*/
+  grid-template-rows: 30px auto auto auto auto auto 100px; 
+  width: 100vw; 
+}
+
+.nav{
+   /*Your code here */
+   vertical-align: middle;
+   grid-row: 1 / span 1;
+   grid-column: 1/4;
+  /*Provided*/
+  background-color: #ddd;
+  padding: 20px 0; 
+  text-align: left; 
+}
+
+header{
+  background-attachment: fixed; /* Parallax effect */
+  background-image: url("../images/header.jpg");  /* Your code here - Link to header.jpg in the images folder */
+  background-position: center;  /* Parallax effect */
+  background-repeat: no-repeat; /* Parallax effect */
+  background-size: cover;       /* Parallax effect */
+  color: white;
+  height: 400px;                /* Parallax effect */
+
+  /*Your code here - cover the entire row*/
+  width: 100%;
+  grid-row: 2/ span 1;
+  grid-column: 1/ -1;
+}
+
+header p{
+  color: white;
+  font-size: 24px;
+  padding: 0 100px;
+  text-align: center;
+}
+
+.about-image{
+  grid-row: 3/ span 1;
+  grid-column: 1/ -1;
+  max-height: 700px;
+  overflow: hidden;
+  width: 100%;
+
+}
+
+.about{
+  grid-column: 2 / span 1;
+  grid-row: 3 / span 1;
+}
+
+.method-image{
+  grid-column: 1 / -1;
+  grid-row: 4/ span 1;
+  max-height: 700px;
+  overflow: hidden;
+}
+
+.method{
+    grid-column: 2/ span 1;
+    grid-row: 4/ span 1;
+
+}
+
+.clients-image{
+  grid-row: 5/ span 1;
+  grid-column: 1 / -1;
+  max-height: 700px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.clients{
+  grid-column: 2 / span 1;
+  grid-row: 5/ span 1;
+}
+
+.contact-image{
+  grid-row: 6/ span 1;
+  grid-column: 1/ -1;
+  max-height: 700px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.contact{
+   grid-column: 2/ span 1;
+   grid-row: 6 / span 1;
+}
+
+.text-block{
+
+   /*Your code here */
+  justify-self: center;
+  align-self: center;
+  z-index: 100;
+  background-color: rgba(255, 255, 255, .8);
+  border: 10px solid black;
+  padding: 30px;
+}
+
+
+
+/*@media screen and (min-width: 800px) {
+  }
+*/
+/*@media screen and (prefers-reduced-motion: reduce){ 
+  /* need to include a jump to content for in-page links instead of scrolling through 
+}*/
+@media /*Your code here - Add the first media query.*/{
+
+  /*Within responsive design the most commonly used features include min-width and max-width. 
+  These help build responsive websites on desktops and mobile devices equally, avoiding any 
+  confusion with device features. */
+}
+
+  /*.container{
+    /*Your code here */
+   /* grid-template-columns: 50px auto 500pc auto 50px;
+    grid-template-rows: 70px 400px 400px 400px 400px 400px 100px;
+  }  */
+
+  .nav{
+    background-color: #ddd;
+
+     /*Your code here */
+  }
+
+  .about-image{
+     /*Your code here */
+    }
+
+  .about{
+    /*Your code here */
+  }
+
+  .method-image{
+    /*Your code here */
+  }
+
+  .method{
+    /*Your code here */
+  }
+
+  .clients-image{
+    /*Your code here */
+
+  }
+
+  .clients{
+    /*Your code here */
+  }
+
+  .contact-image{
+    /*Your code here */
+  }
+
+  .contact{
+    /*Your code here */
+   }
+
+}  /*End the media query*/
+
+@media screen and (prefers-reduced-motion: reduce){
+  html{
+      scroll-behavior: auto; /* Removes scroll animation */
+  }
+
+  .skip a{
+    background: white;
+    left: 0;
+    padding: 6px;
+    position: absolute;
+    top: -40px;
+    -webkit-transition: all;/* Your code here - set to default setting */
+    transition: default;/* Your code here - set to default setting */
+    z-index: 1;
+  }
+
+  .skip a:focus{
+    top:0;
+  }
+}
