@@ -52,11 +52,13 @@ nav a:hover{
   z-index: 1;
 }
 
-/*Your code here*/{
+.skip{
+  top: 0;
 /*Add the selector and rule to move the skip link to the exact top.*/
 }
 
-/*Your code here*/{
+.focus{
+  border: 2px solid black;
 /*Add the selector and code to put a 2px black border around all elements in focus.*/
 }
 
@@ -64,8 +66,8 @@ nav a:hover{
 footer{
   background-color: black;
   color: white;
-  grid-column: 1 / -1;  /*Can you explain what this does?*/
-  grid-row: 7 / auto;   /*Can you rewrite it?*/
+  grid-column: 1 / -1;  /*starts footer at column one and spans the full page*/
+  grid-row: 7 / span 1;  
   padding-top: 30px;
   text-align: center;
 }
@@ -85,14 +87,12 @@ footer{
 }
 
 .nav{
-   /*Your code here */
    vertical-align: middle;
    grid-row: 1 / span 1;
-   grid-column: 1/4;
-  /*Provided*/
-  background-color: #ddd;
-  padding: 20px 0; 
-  text-align: left; 
+   grid-column: 1/-1;
+   background-color: #ddd;
+   padding: 20px 0; 
+   text-align: left; 
 }
 
 header{
@@ -123,7 +123,6 @@ header p{
   max-height: 700px;
   overflow: hidden;
   width: 100%;
-
 }
 
 .about{
@@ -171,8 +170,6 @@ header p{
 }
 
 .text-block{
-
-   /*Your code here */
   justify-self: center;
   align-self: center;
   z-index: 100;
@@ -181,64 +178,71 @@ header p{
   padding: 30px;
 }
 
-
-
-/*@media screen and (min-width: 800px) {
-  }
-*/
-/*@media screen and (prefers-reduced-motion: reduce){ 
-  /* need to include a jump to content for in-page links instead of scrolling through 
-}*/
-@media /*Your code here - Add the first media query.*/{
-
-  /*Within responsive design the most commonly used features include min-width and max-width. 
-  These help build responsive websites on desktops and mobile devices equally, avoiding any 
-  confusion with device features. */
-}
-
-  /*.container{
-    /*Your code here */
-   /* grid-template-columns: 50px auto 500pc auto 50px;
+@media screen and (min-width: 800px) {
+  .container{
+    grid-template-columns: 50px auto 500px auto 50px;
     grid-template-rows: 70px 400px 400px 400px 400px 400px 100px;
-  }  */
+  }  
 
   .nav{
     background-color: #ddd;
-
-     /*Your code here */
+    vertical-align: right;
+    grid-row: 1 / span 1;
+    grid-column: 1/-1;
+    padding: 35px 0; 
+    text-align: right;
   }
 
   .about-image{
-     /*Your code here */
-    }
+    grid-row: 3/ span 1;
+    grid-column: 2/ span 2;
+    max-height: 700px;
+    overflow: hidden;
+    width: 100%;
+  }
 
   .about{
-    /*Your code here */
+    grid-column: 3 / span 2;
+    grid-row: 3 / span 1;
   }
 
   .method-image{
-    /*Your code here */
+    grid-row: 4/ span 1;
+    grid-column: 3/ span 2;
+    max-height: 700px;
+    overflow: hidden;
+    width: 100%;
   }
 
   .method{
-    /*Your code here */
+    grid-column: 2 / span 2;
+    grid-row: 4 / span 1;
   }
 
   .clients-image{
-    /*Your code here */
-
+    grid-row: 5/ span 1;
+    grid-column: 2/ span 2;
+    max-height: 700px;
+    overflow: hidden;
+    width: 100%;
   }
 
   .clients{
-    /*Your code here */
+    grid-column: 3 / span 2;
+    grid-row: 5 / span 1;
   }
 
   .contact-image{
-    /*Your code here */
+    grid-row: 6/ span 1;
+    grid-column: 3/ span 2;
+    max-height: 700px;
+    overflow: hidden;
+    width: 100%;
   }
 
   .contact{
-    /*Your code here */
+    grid-column: 2 / span 2;
+    grid-row: 6 / span 1;
    }
 
 }  /*End the media query*/
@@ -246,6 +250,7 @@ header p{
 @media screen and (prefers-reduced-motion: reduce){
   html{
       scroll-behavior: auto; /* Removes scroll animation */
+      animation: none;
   }
 
   .skip a{
@@ -254,8 +259,8 @@ header p{
     padding: 6px;
     position: absolute;
     top: -40px;
-    -webkit-transition: all;/* Your code here - set to default setting */
-    transition: default;/* Your code here - set to default setting */
+    -webkit-transition: initial;/* Your code here - set to default setting */
+    transition: initial;/* Your code here - set to default setting */
     z-index: 1;
   }
 
